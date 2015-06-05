@@ -1,5 +1,4 @@
-<h1>Listing pins</h1>
-
+<h1>My Pins</h1>
 <table>
   <thead>
     <tr>
@@ -8,18 +7,21 @@
     </tr>
   </thead>
 
+  <div class= "form-group">
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
         <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pin, class: "btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-sm" %></td>
+        <td><%= link_to 'Destroy', pin, class: "btn btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+  </div>
 </table>
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<%= link_to 'New Pin', new_pin_path, class: "btn btn-primary" %>
+</div>
