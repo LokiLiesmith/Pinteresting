@@ -6,11 +6,11 @@
 		   <%= link_to image_tag(pin.image.url(:medium)), pin %>
 		  <div class="panel-body">
 				  <p><%= pin.description %></p>
-				 	<p><strong><%= pin.user.email if pin.user %></strong></p>
+				 	<p><strong><%= pin.user.name if pin.user %></strong></p>
 				</div>
 			 
 				  <% if pin.user == current_user %>
-				   <div class="actions">
+				   <div class="actions form-control">
 				    <%= link_to edit_pin_path(pin) do%>
 				    	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
 				    <%end%>
